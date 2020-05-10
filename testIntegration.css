@@ -1,0 +1,415 @@
+/*fonts*/
+@font-face {
+    font-family: "Roboto-Thin";
+    src: url("./font/Roboto-Thin.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Roboto-Black";
+    src: url("./font/Roboto-Black.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Roboto-Condensed";
+    src: url("./font/Roboto-Condensed.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Roboto-Light";
+    src: url("./font/Roboto-Light.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url("./font/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Ginóra Sans Light";
+    src: url("./font/Ginóra Sans Light.otf") format("opentype");
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+/*header*/
+header{
+    display: grid;
+    grid-template-columns: 3fr 3fr  70px 2fr;
+    height: 500px;
+    overflow: hidden;
+    background-color: #e9eae2;
+}
+header .logo img{
+    height: 45px;
+    width: 45px;
+}
+header .nameProduct{
+    background-image: url(./img/salieres.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 290px;
+}
+header .nameProduct h1{
+    margin-top: 15%;
+    font-size: 1.8rem;
+}
+
+header .nameProduct img{
+    max-height: 350px;
+    align-self: flex-end;
+    margin-top: auto;
+    margin-bottom: 3%;
+}
+header aside ul{
+    margin-top: 60px;
+    list-style-type:none;
+    padding: 0;
+}
+header aside li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+header aside li:hover{
+    background-color: rgba(169, 223, 255, 0.3);
+}
+header aside li.current{
+    background-color: #86d8cd;
+}
+header #mainNav{
+    color: #3ab2a5;
+    background-image: url("img/Layer15.png");
+    background-size: cover;
+}
+
+header #mainNav h1{
+    margin: 2rem;
+    font-size: 1rem;
+    color: gray;
+    font-family: "Roboto-Condensed", sans-serif;
+}
+
+header #mainNav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 100px;
+    list-style-type:none;
+    align-items: baseline;
+    padding: 0;
+    font-family: "Roboto-Black", sans-serif;
+    font-size: 0.9rem;
+}
+header #mainNav ul li{
+    text-align: center;
+}
+header #mainNav ul li:hover{
+    transform: scale(1.05);
+}
+
+/*général corp*/
+.mainParts{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    min-height: 300px;
+    overflow: hidden;
+}
+body .product:nth-of-type(3){
+    grid-template-columns: 1fr 0.7fr 1.3fr 1fr;
+}
+
+.mainParts>*{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body .product:nth-of-type(even)>aside{
+    order: 4;
+}
+body .product:nth-child(even){
+    background-color: #f5f5f5;
+}
+
+/*auteur*/
+.author{
+    align-items: flex-start;
+    margin: 10%;
+}
+.product .author img{
+    margin-left: 1rem;
+}
+.author p{
+    font-family: "Roboto-Black", sans-serif;
+    font-size: 0.9rem;
+    color: #adada7;
+}
+header .author{
+    text-align: center;
+}
+.author em{
+    font-size: 3rem;
+    font-style: normal;
+    font-family: "Roboto-Thin", sans-serif;
+}
+/*aside*/
+.product>aside{
+    justify-content: center;
+}
+.product>aside *{
+    margin: 0;
+}
+.product:first-of-type>aside{
+    background-color: #7dd5c9;
+    background-image: url("img/backgroundAngle1.svg");
+    background-size: 10px 20px;
+    background-repeat: repeat-y;
+    background-position: right;
+    color: #499286;
+}
+.product:nth-of-type(2)>aside{
+    background-color: #bfe79e;
+    background-image: url("img/backgroundAngle2.svg");
+    background-size: 10px 20px;
+    background-repeat: repeat-y;
+    background-position: left;
+    color: #7c9965;
+}
+.product:nth-of-type(3)>aside{
+    background-color: #f8c255;
+    background-image: url("img/backgroundAngle3.svg");
+    background-size: 10px 20px;
+    background-repeat: repeat-y;
+    background-position: right;
+    color: #ad873a;
+}
+.product>aside img{
+    height: 60px;
+}
+.product>aside h1{
+    margin-top: 1rem;
+    font-family: "Roboto-Light", sans-serif;
+}
+.product>aside p{
+    font-family: "Roboto-Medium", sans-serif;
+    font-size: 0.8rem;
+}
+/*nameProduct*/
+.nameProduct{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 2.5rem 0 0 2.5rem;
+    font-family: "Roboto-Light", sans-serif;
+    font-size: 1rem;
+    color: #bdbdbd;
+}
+.nameProduct h1{
+    margin: 2px 0 0 0;
+}
+.nameProduct .price{
+    font-family: "Ginóra Sans Light", sans-serif;
+    font-size: 2rem;
+    margin: 2px 0 0 0;
+}
+.nameProduct a{
+    display: flex;
+    margin: 1.2rem 0 0 0;
+    color: #bdbdbd;
+    text-decoration: none;
+    align-items: center;
+}
+.nameProduct a p{
+    display: inline;
+}
+.nameProduct img[src="img/greyHeart.png"]{
+    height: 17px;
+    margin-right: 0.7rem;
+}
+.nameProduct a:hover{
+    color: grey;
+}
+.nameProduct a:hover>img{
+    transform: scaleX(1.09) scaleY(1.06);
+}
+.dollar{
+    font-family: "Roboto-Light", sans-serif;
+    font-size: 1.4rem;
+}
+
+
+/*image de produit*/
+.imgProduct{
+    display: flex;
+    justify-content: flex-end;
+}
+.imgProduct img{
+    height: 200px;
+    max-width: 100%;
+    max-height: initial;
+    position: relative;
+    bottom: -2%;
+}
+.product:nth-of-type(3)>.imgProduct img{
+    position: relative;
+    bottom: -20%;
+}
+
+/*séparateur*/
+div.mainParts{
+    background-image: url("img/Layer14.png"); 
+}
+div.mainParts div{
+    grid-column-start: 2;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    height: 160px;
+    width: 160px;
+    box-sizing: border-box;
+    padding-top: 40px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    font-size: 0.9rem;
+}
+div.mainParts p{
+    font-family: "Roboto-Light", sans-serif;
+    color: #939393;
+    font-size: 1.05rem;
+}
+
+/*footer*/
+footer{
+    display: flex;
+    width: 100%;
+    background-image: url("img/Layer24.png");
+    background-size: cover;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-height: 300px;
+}
+footer .footerLeft{
+    margin: 40px;
+}
+footer .footerRight{
+    margin-bottom: 40px;
+    margin-right: 10%;
+}
+.footerLeft img{
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+footer p{
+    color: #7c7a7a;
+    font-family: "roboto-light", sans-serif;
+}
+footer .footerRight .logo{
+    display: flex;
+    flex-direction: row;
+}
+footer .footerRight p{
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+/*hoverMenu*/
+.hoverMenu{
+    position: absolute;
+        top: 0;
+        left: 15%;
+    width: 270px;
+    height: 220px;
+    background-image: url("img/backgroundHover.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+}
+.hoverMenu div{
+    display: flex;
+    align-items: center;
+    margin-top: 18%;
+    height: 60px;
+}
+.hoverMenu div img{
+    width: 25px;
+}
+.hoverMenu div img[src="img/arrow.png"]{
+    margin: 9px;
+    height: 20px;
+    width: 10px;
+}
+.hoverMenu div img[src="img/arrow.png"]:hover{
+    transform: scale(1.2);
+}
+.hoverMenu div img[src="img/arrow.png"]:last-of-type{
+    transform: rotate(180deg);
+}
+.hoverMenu div img[src="img/arrow.png"]:last-of-type:hover{
+    transform: scale(1.2) rotate(180deg);
+}
+
+@media (max-width: 800px){
+    .hoverMenu, header aside, div.mainParts, .logo, #imgsFooter{
+        display: none;
+    }
+    header{
+        grid-template: auto auto / 1fr 1fr;
+        height: auto;
+    }
+    header .nameProduct{
+        margin-left: 1rem;
+        background-size: 200px;
+    }
+    header .nameProduct h1 {
+        margin-top: 0;
+    }
+    
+    #mainNav{
+        grid-column: 1 / span 2;
+        grid-row-start: 1;
+    }
+    header #mainNav ul{
+        grid-template-columns: repeat(auto-fill, 100px);
+        grid-auto-flow: row;
+        justify-content: space-around;
+    }
+    header #mainNav h1{
+        background-image: url(img/logo.png);
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: contain; 
+        text-align: center;
+        font-size: 2rem;
+    }
+    .mainParts{
+        display: block;
+        background-color: #f5f5f5;
+    }
+    .mainParts{
+        display: grid;
+        grid-template: auto auto auto / 1fr 1fr !important;
+        min-height: auto;
+    }
+    .product>aside{
+        grid-column: 1 / span 2;
+        order: 0 !important;
+        background-image: none !important;
+        padding: 3.5rem 0 1rem 0;
+    }
+    
+    .imgProduct{
+        grid-column: 1 / span 2;
+        order: 4;
+    }
+    .author{
+        margin: 6% 0 0 10%;
+    }
+}
+@media (max-width: 400px){
+    header .author, header .nameProduct{
+        grid-column: span 2;
+        min-height: 300px;
+    }
+    header .author{
+        margin-top: 0;
+    }
+}
